@@ -1,0 +1,163 @@
+/* Configuração do corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('./image.png'); /* Substitua 'image.png' pelo caminho do seu GIF ou imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna e legível */
+    color: #f0f0f0; /* Cor clara para o texto */
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    padding: 20px 0;
+    z-index: 1000; /* Garante que o menu esteja acima de outros conteúdos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+/* Estilo da logo no cabeçalho */
+.logo img {
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* Menu de navegação no cabeçalho */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Espaçamento do conteúdo principal */
+main {
+    margin-top: 80px; /* Espaço para evitar que o conteúdo fique escondido atrás do menu fixo */
+    padding: 20px;
+}
+
+/* Estilo da seção hero */
+.hero {
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente para contraste com o texto */
+    padding: 100px 20px; /* Padding generoso para espaçamento */
+    text-align: center;
+    color: #f0f0f0;
+    border-radius: 10px; /* Bordas arredondadas suaves */
+}
+
+.primary-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.second-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Estilo dos botões */
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-exp, .btn-personal {
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.125rem;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-exp {
+    background-color: rgba(255, 99, 71, 0.9); /* Tom de laranja com opacidade */
+}
+
+.btn-personal {
+    background-color: rgba(0, 123, 255, 0.9); /* Tom de azul com opacidade */
+}
+
+.btn-exp:hover, .btn-personal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(36, 32, 32, 0.3);
+}
+
+/* Estilo do nome da academia no canto da tela */
+.academy-name {
+    position: fixed;
+    top: 20px; /* Ajuste a distância do topo conforme necessário */
+    right: 20px; /* Ajuste a distância da borda direita conforme necessário */
+    font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    color: #e4e70c; /* Cor do texto. Ajuste conforme desejado */
+    z-index: 1000; /* Garantir que o texto fique sobre outros elementos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .academy-name {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte em telas menores */
+        right: 10px; /* Ajusta a distância da borda direita */
+        top: 10px; /* Ajusta a distância do topo */
+    }
+}
